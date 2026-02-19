@@ -35,9 +35,13 @@
       <li>The extension matches a supported format.</li>
     </ul>
     <li>The script automatically creates the following structure (if it does not exist):</li>
-      Shutterstock/
-      ├─ Images/
-      └─ Videos/
+    <ul>
+      <li>Shutterstock</li>
+      <ul>
+        <li>Images</li>
+        <li>Videos</li>
+      </ul>
+    </ul>  
     <li>Files are moved into their corresponding category.</li>
     <li>A completion message indicated whether files were organized.</li>
   </ol>
