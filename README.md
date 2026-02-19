@@ -64,7 +64,7 @@
     <li>Extension-based classification.</li>
     <li>Safe file movement using native Python modules.</li>
   </ul>
-  <p>The filedialog method from tkinter ensures that no beginnig and no destination route is hard coded, so that anyone can use this on the folders they desire.</p>
+  <p>The <code>filedialog</code> module from <code>tkinter</code> ensures that neither the source nor the destination paths are hardcoded, allowing the script to run on any machine and with any folder structure.</p>
 </div>
 
 ```python
@@ -74,6 +74,9 @@ filesRoute = filedialog.askdirectory(title="Select folder with the files")
 
 os.chdir(route)
 ```
+<div>
+  <p>The use of <code>os.chdir(route)</code> changes the working directory so that relative paths are created inside the selected destination folder.</p>
+</div>
 
 <div>
   <p>
@@ -81,6 +84,22 @@ os.chdir(route)
     <br>
     Later on, I iterate through the folder which contains the files to be organized, I split the name and extension from each other, then I filter which ones are related to Shutterstock, and then I move them where I want them to be.</p>
 </div>
+
+```python
+for file in os.listdir(filesRoute):
+    fileRoute = os.path.join(filesRoute, file)
+
+    if os.path.isfile(fileRoute):
+        name,ext = os.path.splitext(fileRoute)
+        name = os.path.basename(name)
+        ext = ext.lower()
+
+        if ext in extensions and name.startswith("shutterstock"):
+            counter += 1
+            destination = os.path.join(newFolderRoute, extensions[ext], file)
+            shutil.move(fileRoute, destination)
+```
+
 ---
 
 ## Supported File Types
