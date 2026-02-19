@@ -23,7 +23,7 @@
 <div>
   <p>This script was created to make uploading images and videos purchased from Shutterstock to Google Drive easier and faster. It doesn't automatically upload files to Google Drive (yet), but it allows you to quickly identify images and videos within your "Downloads" folder (or wherever you're saving your Shutterstock downloads), so you can then easily select and upload them all to Google Drive.
   <br>
-  It runs interactively using native system dialogs, in which you:
+  It runs interactively using native system dialogs. The process is like this:
   </p>
   <ol>
     <li>Select the destination folder where the organized structure will be created.</li>
@@ -49,7 +49,7 @@
 
 ---
 
-## 🎯 Project Objective
+## 🎯Script Objetive
 
 <div>
   <p>This automation solves common workflow problems:</p>
@@ -64,8 +64,16 @@
     <li>Extension-based classification.</li>
     <li>Safe file movement using native Python modules.</li>
   </ul>
+  <p>The filedialog method from tkinter ensures that no beginnig and no destination route is hard coded, so that anyone can use this on the folders they desire.</p>
 </div>
 
+```python
+#--- Folder route
+route = filedialog.askdirectory(title="Select folder to be organized")
+filesRoute = filedialog.askdirectory(title="Select folder with the files")
+
+os.chdir(route)
+```
 ---
 
 ## Supported File Types
