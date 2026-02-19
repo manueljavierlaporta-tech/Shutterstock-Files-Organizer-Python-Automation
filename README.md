@@ -114,4 +114,18 @@ This tool is useful in workflows where:
 - Files accumulate in a general downloads directory.
 - Assets must be organized quickly before indexing or tracking.
 
+## ⚠️ Notes
 
+- Files are moved, not copied.
+- Existing folders are reused.
+- Only files starting with "shutterstock" are processed.
+- The script does not overwrite existing files with the same name.
+
+## 🚀 Possible Improvements
+
+- Automatic detection of the Downloads folder
+- Logging system
+- Duplicate file handling
+- Drag & drop support
+- Simple GUI interface
+- Batch automation mode (no dialogs)
