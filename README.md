@@ -118,25 +118,6 @@ The extension system is easily scalable by modifying the dictionary inside the s
 
 ---
 
-## 🧠 Core Logic
-
-Files are filtered using two conditions:
-
-```python
-if ext in extensions and name.startswith("shutterstock"):
-```
-This guarantees that:
-- Only supported formats are processed.
-- Only Shutterstock assets are moved.
-
-## 🖥️ User Interaction
-
-The script uses Tkinter native dialogs to avoid hardcoded paths and allow execution on any machine:
-
-```python
-filedialog.askdirectory()
-```
-
 ## 📦 Executable Version (Optional)
 
 The script can be converted into a standalone .exe file so it can run without requiring Python to be installed.
@@ -145,13 +126,6 @@ Example:
 ```bash
 pyinstaller --onefile --noconsole organizer.py
 ```
-
-## 📌 Use Case
-
-This tool is useful in workflows where:
-- Creative assets are downloaded frequently.
-- Files accumulate in a general downloads directory.
-- Assets must be organized quickly before indexing or tracking.
 
 ## ⚠️ Notes
 
