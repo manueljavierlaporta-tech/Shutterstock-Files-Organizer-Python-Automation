@@ -1,14 +1,15 @@
 import os
 import shutil
 from tkinter import Tk, filedialog, messagebox
+from datetime import datetime
 
 window = Tk()
 window.withdraw()
 
 counter = 0
 #--- Folder route
-route = filedialog.askdirectory(title="Select folder to be organized")
-filesRoute = filedialog.askdirectory(title="Select folder with the files")
+route = filedialog.askdirectory(title="Select destination folder")
+filesRoute = filedialog.askdirectory(title="Select source folder")
 
 os.chdir(route)
 
