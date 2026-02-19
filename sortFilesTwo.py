@@ -1,7 +1,6 @@
 import os
 import shutil
 from tkinter import Tk, filedialog, messagebox
-from datetime import datetime
 
 window = Tk()
 window.withdraw()
@@ -57,3 +56,4 @@ if counter != 0:
     messagebox.showinfo("Finished", "Files organized successfully!")
 else:
     messagebox.showinfo("Finished", "You don't have any file to be organized")
+
