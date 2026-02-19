@@ -21,7 +21,10 @@
 
 ## ✍🏻 Workflow
 <div>
-  <p>The script runs interactively using native system dialogs:</p>
+  <p>This script was created to make uploading images and videos purchased from Shutterstock to Google Drive easier and faster. It doesn't automatically upload files to Google Drive (yet), but it allows you to quickly identify images and videos within your "Downloads" folder (or wherever you're saving your Shutterstock downloads), so you can then easily select and upload them all to Google Drive.
+  <br>
+  It runs interactively using native system dialogs, in which you:
+  </p>
   <ol>
     <li>Select the destination folder where the organized structure will be created.</li>
     <li>Select the source folder containing the downloaded files.</li>
@@ -32,11 +35,13 @@
       <li>The extension matches a supported format.</li>
     </ul>
     <li>The script automatically creates the following structure (if it does not exist):</li>
+    <small>
     <pre>
       Shutterstock/
       ├─ Images/
       └─ Videos/
     </pre>
+    </small>
     <li>Files are moved into their corresponding category.</li>
     <li>A completion message indicated whether files were organized.</li>
   </ol>
