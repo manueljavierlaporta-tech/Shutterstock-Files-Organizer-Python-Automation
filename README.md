@@ -74,6 +74,13 @@ filesRoute = filedialog.askdirectory(title="Select folder with the files")
 
 os.chdir(route)
 ```
+
+<div>
+  <p>
+    I, then, create automatically the folders which I need to create (in this case, only "Images" and "Videos").
+    <br>
+    Later on, I iterate through the folder which contains the files to be organized, I split the name and extension from each other, then I filter which ones are related to Shutterstock, and then I move them where I want them to be.</p>
+</div>
 ---
 
 ## Supported File Types
